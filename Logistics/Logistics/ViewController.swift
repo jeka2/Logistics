@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 class ViewController: UIViewController {
     
@@ -31,6 +32,20 @@ class ViewController: UIViewController {
         marker.map = mapView
     }
     
-    
 }
 
+extension ViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        
+    }
+    
+}
